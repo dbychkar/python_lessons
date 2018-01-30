@@ -2,28 +2,28 @@ import math
 a = float(input())
 b = float(input())
 c = float(input())
-d = (b * b) - (4 * a * c)
+d = (b ** 2) - (4 * a * c)
 if d == 0:
-    root = -b / (2 * a)
-    if root % 1 == 0:
-        root1an = int(root)
+    x = -b / (2 * a)
+    if x % 1 == 0:
+        x1an = int(x)
     else:
-        root1an = root
-    print(root1an)
+        x1an = x
+    print(x1an)
 elif d < 0:
-    puppy = math.sqrt(0 - d)
+    y = math.sqrt(0 - d)
 else:
-    root1 = (-b + math.sqrt(d)) / (2 * a)
-    root2 = (-b - math.sqrt(d)) / (2 * a)
-    if root1 % 1 == 0:
-        root1an = int(root1)
+    x1 = (-b + math.sqrt(d)) / (2 * a)
+    x2 = (-b - math.sqrt(d)) / (2 * a)
+    if x1 % 1 == 0:
+        x1an = int(x1)
     else:
-        root1an = root1
-    if root2 % 1 == 0:
-        root2an = int(root2)
+        x1an = x1
+    if x2 % 1 == 0:
+        x2an = int(x2)
     else:
-        root2an = root2
-    if root1an <= root2an:
-        print('{} {}'.format(round(root1an, 6), round(root2an, 6)))
+        x2an = x2
+    if x1an <= x2an:
+        print('{} {}'.format(round(x1an, 6), round(x2an, 6)))
     else:
-        print('{} {}'.format(round(root2an, 6), round(root1an, 6)))
+        print('{} {}'.format(round(x2an, 6), round(x1an, 6)))
